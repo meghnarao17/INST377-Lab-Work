@@ -25,13 +25,6 @@ function updateSlidePosition() {
   });
 
   slides[slidePosition].classList.add('visible');
-  // Using the .forEach array method, (array.forEach((element) => { per-element work goes here }))
-  // loop through all the slides in your slideArray
-  // and remove the 'visible' class from each classList
-  // then add a class 'hidden' to all of them
-
-  // outside your .forEach,
-  // add a 'visible' class to the slide at the current slidePosition in slides
 }
 
 function moveToNextSlide() {
@@ -41,6 +34,12 @@ function moveToNextSlide() {
     and if so, sets your slidePosition to the first index of an array
     if not, set the slidePosition to the current position plus one
   */
+  
+  if(slidePosition === totalSlides){
+    slidePosition = 0;
+  } else {
+    slidePosition += 1; 
+  }
   updateSlidePosition(); // this is how you call a function within a function
 }
 function moveToPrevSlide() {
