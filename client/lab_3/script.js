@@ -21,7 +21,7 @@ const totalSlides = slidesArray.length;
 function updateSlidePosition() {
   slidesArray.forEach((slide) => {
     slide.classList.remove('visible');
-    slide.classList.add('hidden1');
+    slide.classList.add('hidden');
   });
 
   slides[slidePosition].classList.add('visible');
