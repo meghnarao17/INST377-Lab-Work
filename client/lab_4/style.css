@@ -100,6 +100,7 @@ div {
 
   /* shapes */
   border-radius: 6px;
+  border: 3px dashed;
   font-size: 1.5rem;
   padding: 1.25rem;
   margin:0; /* removing the margin on h1 tags means the header pins to the top if we move */
