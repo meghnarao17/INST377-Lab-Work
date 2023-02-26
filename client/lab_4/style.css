@@ -30,7 +30,7 @@ body {
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(204, 169, 169);
 }
 
 
@@ -46,7 +46,7 @@ h2, h3 {
 }
 
 form {
-  accent-color: hsla(120, 100%, 50%, 0.482);
+  accent-color: hsla(32, 81%, 58%, 0.823);
 }
 
 /*
@@ -95,7 +95,7 @@ div {
   /* this will push other blocks out of the way */
 
   /* colors */
-  background-color: #ffe08a;
+  background-color: #98b6e0;
   color: #4a4a4a;
 
   /* shapes */
