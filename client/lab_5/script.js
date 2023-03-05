@@ -5,6 +5,11 @@
 
 /* A quick filter that will return something based on a matching input */
 function filterList(list, query) {
+  return list.filter(()=> {
+    const lowerCaseName = item.name.toLowerCase();
+    const lowerCaseQuery = query.toLowerCase();
+    return lowerCaseName.inclueds(lowerCaseQuery);
+  });
   /*
     Using the .filter array method, 
     return a list that is filtered by comparing the item name in lower case
@@ -63,8 +68,8 @@ async function mainEvent() { // the async keyword means we can make API requests
     const formProps = Object.fromEntries(formData);
 
     console.log(formProps);
-    const newList = filterList();
-  })
+    const newList = filterList(currentList, formProps.resto);
+  });
 
   /*
     Now that you HAVE a list loaded, write an event listener set to your filter button
