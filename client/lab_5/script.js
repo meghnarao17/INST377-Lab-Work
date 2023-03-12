@@ -69,6 +69,7 @@ async function mainEvent() { // the async keyword means we can make API requests
 
     console.log(formProps);
     const newList = filterList(currentList, formProps.resto);
+    console.log(newlist);
   });
 
   /*
