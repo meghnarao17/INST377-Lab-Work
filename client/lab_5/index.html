@@ -10,20 +10,20 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
-            <h1>Meghna Rao INST377 Labs</h1>
-        </header>
+        <header class="header"><h1>Meghna Rao INST377 Labs</h1></header>
         <!-- wrapper -->
         <div class="container">
             <!--container-->
             <div class="left_section box">
                 <!-- left inputs-->
-                <h3>Form Inputs</h3>
+                <h2>Form Inputs</h2>
                 <!-- Lab 5 -->
-                <form action='https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json' class="box main_form">
+                <form 
+                    action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
+                    class="box main_form">
                 <div>
                     <label for="resto">Restaurant Name</label>
-                    <input type="text" id="resto" />
+                    <input type="text" id="resto" name="resto" />
                 </div>
                     <button type="submit">Load Data</button>
                     <button type="button" class="filter_button">Filter Data</button>
@@ -32,14 +32,14 @@
             <div class="right_section box">
                 <!-- right side -->
                 <!-- images box -->
-                <h3>Local Restaurants</h3>
-                <div class="restaurant_list box">
+                <h2>Local Restaurants</h2>
+
+                <div class="box" id="restaurant_list">
                     <!-- description box -->
-                    A list of local restaurants
+                    A list of local restaurants from an API
                 </div>
             </div>
         </div>
-    </div>
     <footer class="footer">
         YOUR GITHUB ACCOUNT NAME <a href="http://github.com/meghnarao17"> Meghna Rao's INST377 account</a>
     </footer>
