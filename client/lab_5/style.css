@@ -36,7 +36,7 @@
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
     font-weight: 400;
     line-height: 1.5;
-    background-color: rgb(204, 169, 169);
+    background-color: rgba(197, 191, 191, 0.726);
   }
   
   
@@ -52,7 +52,7 @@
   }
   
   form {
-    accent-color: hsla(32, 81%, 58%, 0.823);
+    accent-color: hsla(34, 17%, 84%, 0.823);
   }
   
   /*
@@ -101,7 +101,7 @@
     /* this will push other blocks out of the way */
   
     /* colors */
-    background-color: #98b6e0;
+    background-color: #ced3d9;
     color: #4a4a4a;
   
     /* shapes */
@@ -138,14 +138,14 @@
   }
   
   .left_section {
-    background-color: rgba(129, 45, 74, 0.8);
+    background-color: rgba(215, 213, 214, 0.8);
     flex: 0 1 auto;
     margin: 1rem;
     padding: 1.5rem;
   }
   
   .right_section {
-    background-color: rgba(214, 158, 204, 0.741);
+    background-color: rgba(209, 205, 209, 0.741);
     flex: 1 2 auto;
     margin: 1rem;
     align-items: center;
@@ -163,13 +163,13 @@
   .footer {
     flex-shrink: 0;
     padding: 1rem;
-    background-color: rgba(0, 139, 139, 0.8);
+    background-color: rgba(198, 211, 211, 0.8);
     font-size: 1.2rem;
     font-weight: 600;
   }
   
   .footer a {
-    color: rgba(255, 224, 138, 1);
+    color: rgba(210, 208, 202, 0.852);
     text-decoration: underline;
   }
   
@@ -180,9 +180,9 @@
   */
   .footer a:hover {
     /* Hue, saturation, luminosity, alpha */
-    background-color: hsla(0, 0%, 90%, 0.15);
+    background-color: hsla(0, 15%, 90%, 0.603);
     /* red, green, blue, alpha */
-    color: rgb(246, 169, 93);
+    color: rgb(217, 212, 206);
     text-decoration: none;
   }
   
@@ -312,7 +312,7 @@
       /* Rules in here will only apply when a screen is the correct size */
       /* check it out by using your developer tools to shrink your screen-size */
       .container {
-        background-color: rgba(204, 8, 162, 0.65);
+        background-color: rgba(236, 229, 235, 0.65);
         flex-direction: column;
         justify-content: center;
         align-items: center;
