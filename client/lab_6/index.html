@@ -7,3 +7,54 @@
 
     Try placing it at the same level in your element tree as your Submit button
 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meghna Rao Lab</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header"><h1>Meghna Rao INST377 Labs</h1></header>
+        <!-- wrapper -->
+        <div class="container">
+            <!--container-->
+            <div class="left_section box">
+                <!-- left inputs-->
+                <h2>Form Inputs</h2>
+                <!-- Lab 5 -->
+                <form 
+                    action="https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
+                    class="box main_form">
+                <div>
+                    <label for="resto">Restaurant Name</label>
+                    <input type="text" id="resto" name="resto" />
+                </div>
+                    <button type="submit">Load Data</button>
+                    <button type="button" class="filter_button">Filter Data</button>
+                </form>
+            </div>
+            <div class="right_section box">
+                <!-- right side -->
+                <!-- images box -->
+                <h2>Local Restaurant List</h2>
+
+                <div class="box" id="restaurant_list">
+                    <!-- description box -->
+                    A list of local restaurants from an API
+                </div>
+            </div>
+        </div>
+    <footer class="footer">
+        YOUR GITHUB ACCOUNT NAME <a href="http://github.com/meghnarao17"> Meghna Rao's INST377 account</a>
+    </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
+
