@@ -35,6 +35,15 @@ function filterList(list, query) {
   */
 }
 
+function cutRestaurantList(list) {
+  console.log('fired cut list');
+  const range = [...Array(15).keys()]
+  return newArray = range.map((item) => {
+    const index = getRandomIntInclusive(0, list.length -1);
+    return list[index]
+  })
+}
+
 async function mainEvent() { // the async keyword means we can make API requests
   const mainForm = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
   const filterButton = document.querySelector('#filter');
@@ -78,6 +87,12 @@ async function mainEvent() { // the async keyword means we can make API requests
     injectHTML(newList);
   });
 
+
+  generateListButton.addEventListener('click', (event) => {
+      console.log('generate new list');
+      const restaurantsList = cutRestaurantList(currentList);
+      injectHTML(restaurantsList);
+  })
   /*
     Now that you HAVE a list loaded, write an event listener set to your filter button
     it should use the 'new FormData(target-form)' method to read the contents of your main form
