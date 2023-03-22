@@ -91,7 +91,7 @@ async function mainEvent() { // the async keyword means we can make API requests
   generateListButton.addEventListener('click', (event) => {
       console.log('generate new list');
       const restaurantsList = cutRestaurantList(currentList);
-      injectHTML(restaurantsList);
+      
   })
   /*
     Now that you HAVE a list loaded, write an event listener set to your filter button
