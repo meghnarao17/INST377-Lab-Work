@@ -1,7 +1,4 @@
-/*
-  Hook this script to index.html
-  by adding `<script src="script.js">` just before your closing `</body>` tag
-*/
+
 function getRandomIntInclusive(min, max){
   min = Math.ceil(min);
   max = Math.floor(max); 
@@ -19,20 +16,15 @@ function injectHTML(list) {
 }
 
 
-/* A quick filter that will return something based on a matching input */
+
 function filterList(list, query) {
   return list.filter((item) => {
     const lowerCaseName = item.name.toLowerCase();
     const lowerCaseQuery = query.toLowerCase();
     return lowerCaseName.includes(lowerCaseQuery);
   });
-  /*
-    Using the .filter array method, 
-    return a list that is filtered by comparing the item name in lower case
-    to the query in lower case
-
-    Ask the TAs if you need help with this
-  */
+  
+ 
 }
 
 function cutRestaurantList(list) {
