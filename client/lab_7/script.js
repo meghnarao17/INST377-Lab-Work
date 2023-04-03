@@ -46,6 +46,7 @@ function getRandomIntInclusive(min, max){
     const loadAnimation = document.querySelector('#data_load_animation');
     loadAnimation.style.display = 'none';
   
+    let storedList = [];
     let currentList = []; // this is "scoped" to the main event function
     
     /* We need to listen to an "event" to have something happen in our page - here we're listening for a "submit" */
@@ -60,9 +61,9 @@ function getRandomIntInclusive(min, max){
       //console.long(results);
   
       // This changes the response from the GET into data we can use - an "object"
-      currentList = await results.json();
+      storedList = await results.json();
       loadAnimation.style.display = 'none';
-      console.table(currentList); 
+      console.table(storedList); 
       injectHTML(currentList);
     });
   
@@ -81,9 +82,9 @@ function getRandomIntInclusive(min, max){
   
     generateListButton.addEventListener('click', (event) => {
         console.log('generate new list');
-        const restaurantsList = cutRestaurantList(currentList);
-        console.log(restaurantsList);
-        injectHTML(restaurantsList); 
+        currentList = cutRestaurantList(storedList);
+        console.log(currentList);
+        injectHTML(currentList); 
         
     })
     /*
@@ -99,6 +100,9 @@ function getRandomIntInclusive(min, max){
     */
    textField.addEventListener('input', (event) => {
       console.log('input', event.target.value);
+      const newList = filterList(currentList, event.target.value);
+      console.log(newList);
+      injectHTML(newList);  
    })
   }
   
