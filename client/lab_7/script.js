@@ -41,6 +41,7 @@ function getRandomIntInclusive(min, max){
     const filterDataButton = document.querySelector('#filter');
     const loadDataButton = document.querySelector('#data_load');
     const generateListButton = document.querySelector('#generate');
+    const textField = document.querySelector('#resto');
     
     const loadAnimation = document.querySelector('#data_load_animation');
     loadAnimation.style.display = 'none';
@@ -96,12 +97,11 @@ function getRandomIntInclusive(min, max){
       Fire it here and filter for the word "pizza"
       you should get approximately 46 results
     */
+   textField.addEventListener('input', (event) => {
+      console.log('input', event.target.value);
+   })
   }
   
-  /*
-    This adds an event listener that fires our main event only once our page elements have loaded
-    The use of the async keyword means we can "await" events before continuing in our scripts
-    In this case, we load some data when the form has submitted
-  */
+  
   document.addEventListener('DOMContentLoaded', async () => mainEvent()); // the async keyword means we can make API requests
   
