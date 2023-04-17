@@ -37,13 +37,13 @@ function getRandomIntInclusive(min, max){
   }
   
   async function mainEvent() { // the async keyword means we can make API requests
-    const mainForm = document.querySelector('.main_form'); // This class name needs to be set on your form before you can listen for an event on it
-    const loadDataButton = document.querySelector('#data_load');
-    const generateListButton = document.querySelector('#generate');
-    const textField = document.querySelector('#resto');
+    const mainForm = document.querySelector(".main_form"); // This class name needs to be set on your form before you can listen for an event on it
+    const loadDataButton = document.querySelector("#data_load");
+    const generateListButton = document.querySelector("#generate");
+    const textField = document.querySelector("#resto");
     
-    const loadAnimation = document.querySelector('#data_load_animation');
-    loadAnimation.style.display = 'none';
+    const loadAnimation = document.querySelector("#data_load_animation");
+    loadAnimation.style.display = "none";
     generateListButton.classList.add("hidden");
 
     const storedData = localStorage.getItem('storedData');
@@ -67,21 +67,17 @@ function getRandomIntInclusive(min, max){
   
       // This changes the response from the GET into data we can use - an "object"
       const storedList = await results.json();
-      localStorage.setItem('storedData', JSON.stringify(storedList))
+      localStorage.setItem('storedData', JSON.stringify(storedList));
       
       loadAnimation.style.display = 'none';
       //console.table(storedList); 
       injectHTML(currentList);
     });
-  
-    
-  
-  
+
     generateListButton.addEventListener('click', (event) => {
         console.log('generate new list');
-        
         //console.log('what is the type of recallList:', typeof recallList);
-        currentList = cutRestaurantList(storedList);
+        currentList = cutRestaurantList(parsedData);
         console.log(currentList);
         injectHTML(currentList); 
         
@@ -98,7 +94,7 @@ function getRandomIntInclusive(min, max){
       you should get approximately 46 results
     */
    textField.addEventListener('input', (event) => {
-      console.log('input', event.target.value);
+      console.log("input", event.target.value);
       const newList = filterList(currentList, event.target.value);
       console.log(newList);
       injectHTML(newList);  
