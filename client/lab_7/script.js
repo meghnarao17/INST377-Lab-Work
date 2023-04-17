@@ -75,7 +75,7 @@ function getRandomIntInclusive(min, max){
     });
 
     generateListButton.addEventListener('click', (event) => {
-        console.log('generate new list');
+        console.log("generate new list");
         //console.log('what is the type of recallList:', typeof recallList);
         currentList = cutRestaurantList(parsedData);
         console.log(currentList);
