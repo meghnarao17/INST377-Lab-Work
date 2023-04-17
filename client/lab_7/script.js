@@ -29,10 +29,10 @@ function getRandomIntInclusive(min, max){
   
   function cutRestaurantList(list) {
     console.log('fired cut list');
-    const range = [...Array(15).keys()]
+    const range = [...Array(15).keys()];
     return newArray = range.map((item) => {
       const index = getRandomIntInclusive(0, list.length -1);
-      return list[index]
+      return list[index];
     })
   }
   
@@ -46,7 +46,7 @@ function getRandomIntInclusive(min, max){
     loadAnimation.style.display = "none";
     generateListButton.classList.add("hidden");
 
-    const storedData = localStorage.getItem('storedData');
+    const storedData = localStorage.getItem("storedData");
     const parsedData = JSON.parse(storedData);
     if (parsedData.length > 0){
       generateListButton.classList.remove("hidden");
@@ -55,14 +55,14 @@ function getRandomIntInclusive(min, max){
     let currentList = []; // this is "scoped" to the main event function
     
     /* We need to listen to an "event" to have something happen in our page - here we're listening for a "submit" */
-    loadDataButton.addEventListener('click', async (submitEvent) => { // async has to be declared on every function that needs to "await" something
-      console.log('Loading Data'); 
-      loadAnimation.style.display = 'inline-block';
+    loadDataButton.addEventListener("click", async (submitEvent) => { // async has to be declared on every function that needs to "await" something
+      console.log("Loading Data"); 
+      loadAnimation.style.display = "inline-block";
   
       
   
       // Basic GET request - this replaces the form Action
-      const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+      const results = await fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json");
       //console.long(results);
   
       // This changes the response from the GET into data we can use - an "object"
