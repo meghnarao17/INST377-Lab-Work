@@ -6,15 +6,14 @@ function getRandomIntInclusive(min, max){
   }
   
   function injectHTML(list) {
-    console.log('fired injectHTML')
-    const target = document.querySelector('#restaurant_list')
-    target.innerHTML = '';
+    console.log("fired injectHTML");
+    const target = document.querySelector("#restaurant_list")
+    target.innerHTML = "";
     list.forEach((item) => {
       const str = `<li>${item.name}</li>`;
       target.innerHTML += str
-    })
+    });
   }
-  
   
   
   function filterList(list, query) {
@@ -23,8 +22,6 @@ function getRandomIntInclusive(min, max){
       const lowerCaseQuery = query.toLowerCase();
       return lowerCaseName.includes(lowerCaseQuery);
     });
-    
-   
   }
   
   function cutRestaurantList(list) {
@@ -36,6 +33,14 @@ function getRandomIntInclusive(min, max){
     })
   }
   
+  function initMap(){
+    const carto = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(carto);
+  }
+
   async function mainEvent() { // the async keyword means we can make API requests
     const mainForm = document.querySelector(".main_form"); // This class name needs to be set on your form before you can listen for an event on it
     const loadDataButton = document.querySelector("#data_load");
