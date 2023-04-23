@@ -14,7 +14,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meghna Rao Lab</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
     <link rel="stylesheet" href="style.css" />
+
+     <!-- goes after CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+ crossorigin=""></script>
+    
 </head>
 
 <body>
@@ -26,28 +37,26 @@
             <div class="left_section box">
                 <!-- left inputs-->
                 <h2>Form Inputs</h2>
-                <!-- Lab 6 -->
-                <form 
-                    class="box main_form">
-                    <button type="button" id="data_load">Load County Data</button>
+                <form action="/api" class="box main_form">
                 <div>
                     <label for="resto">Filter By Restaurant Name</label>
                     <input type="text" id="resto" name="resto">
                 </div>
-                <div class="buttons">
-                    <button type="button" id="generate">Generate List</button>
-                </div>
+                    <button type="submit">Change List</button>
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                 </form>
+                </div>
             </div>
             <div class="right_section box">
                 <!-- right side -->
                 <!-- images box -->
-                <h2>Local Restaurant List</h2>
-                <ol class="box" id="restaurant_list">
+                <h2>Local Restaurants Map</h2>
+                <div id="map" class="box"></div>
+                <div class="box" id="restaurant_list">
                     <!-- description box -->
-                    A List of Local Restaurants
-                </ol>
-                <div class="lds-ellipsis" id="data_load_animation"><div></div><div></div><div></div><div></div></div>
+                    A List of restaurants from an API
+                </div>
+                
             </div>
         </div>
     <footer class="footer">
